@@ -27,10 +27,9 @@ export default function VPage() {
 
   async function fetchBackground(profile) {
     const background = await getBackground({ profile });
-    if (background) {
-      setBgUrl(background.url);
-      setUploader(background.uploader);
-    }
+
+    setBgUrl(background?.url);
+    setUploader(background?.uploader);
   }
 
   async function runCleanup(profile) {
@@ -39,13 +38,12 @@ export default function VPage() {
 
   useEffect(() => {
     if (profile?.url) {
+      fetchBackground(profile, setBgUrl, setUploader);
+      runCleanup(profile);
       setInterval(() => {
+        fetchBackground(profile, setBgUrl, setUploader);
         runCleanup(profile);
       }, 10000);
-      fetchBackground(profile, setBgUrl, setUploader);
-      const backgroundsRef = collection(firebaseDb, "backgrounds");
-      const q = query(backgroundsRef, where("targetSlug", "==", profile.url));
-      onSnapshot(q, () => fetchBackground(profile, setBgUrl, setUploader));
     }
   }, [profile]);
 

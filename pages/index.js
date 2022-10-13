@@ -1,10 +1,35 @@
+import { CheckIcon } from "@heroicons/react/24/outline";
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 import Logo from "../components/Logo";
+import Link from "next/link";
 
 const navigation = [{ name: "Dashboard", href: "/dashboard" }];
+
+const features = [
+  {
+    name: "Engage your audience",
+    description:
+      "Your viewers get to feel part of the action by having control over your background image!",
+  },
+  {
+    name: "Built-in security",
+    description:
+      "Only users with verified emails can set your background. You can even restrict by certain email domains.",
+  },
+  {
+    name: "Customize your way",
+    description:
+      "Take control of your stream with numerous options to personalize your experience.",
+  },
+  {
+    name: "Easy to setup",
+    description:
+      "Get up an running on any major streaming service quickly thanks to our detailed user guides.",
+  },
+];
 
 export default function IndexPage() {
   return (
@@ -248,19 +273,62 @@ export default function IndexPage() {
       </div>
 
       <div className="bg-white">
-        <div className="px-4 py-12 mx-auto text-center max-w-7xl sm:px-6 lg:py-16 lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            <span className="block">Your audience is waiting.</span>
-            <span className="block">Get started today!</span>
-          </h2>
-          <div className="flex justify-center mt-8">
-            <div className="inline-flex rounded-md shadow">
-              <a
-                href="/login"
-                className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700"
-              >
-                Get started
-              </a>
+        <div className="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:py-24 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+              Introducing fun to video streaming
+            </h2>
+            <p className="mt-4 text-lg text-gray-500">
+              Take your stream to the next level by giving your audience the
+              power to set your virtual background!
+            </p>
+          </div>
+          <dl className="mt-12 space-y-10 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-4 lg:gap-x-8">
+            {features.map((feature) => (
+              <div key={feature.name} className="relative">
+                <dt>
+                  <CheckIcon
+                    className="absolute w-6 h-6 text-green-500"
+                    aria-hidden="true"
+                  />
+                  <p className="text-lg font-medium leading-6 text-gray-900 ml-9">
+                    {feature.name}
+                  </p>
+                </dt>
+                <dd className="mt-2 text-base text-gray-500 ml-9">
+                  {feature.description}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </div>
+
+      <div className="bg-white">
+        <div className="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="overflow-hidden bg-indigo-700 rounded-lg shadow-xl lg:grid lg:grid-cols-2 lg:gap-4">
+            <div className="px-6 pt-10 pb-12 sm:px-16 sm:pt-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20">
+              <div className="lg:self-center">
+                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                  <span className="block">Your viewers are waiting.</span>
+                  <span className="block">Spice up your stream today!</span>
+                </h2>
+                <p className="mt-4 text-lg leading-6 text-indigo-200">
+                  Get up and running in just a few minutes!
+                </p>
+                <Link href="/login">
+                  <a className="inline-flex items-center px-5 py-3 mt-8 text-base font-medium text-indigo-600 bg-white border border-transparent rounded-md shadow hover:bg-indigo-50">
+                    Get started
+                  </a>
+                </Link>
+              </div>
+            </div>
+            <div className="-mt-6 aspect-w-5 aspect-h-3 md:aspect-w-2 md:aspect-h-1">
+              <img
+                className="object-cover object-left-top transform translate-x-6 translate-y-6 rounded-md sm:translate-x-16 lg:translate-y-20"
+                src="https://tailwindui.com/img/component-images/full-width-with-sidebar.jpg"
+                alt="App screenshot"
+              />
             </div>
           </div>
         </div>

@@ -28,10 +28,13 @@ export default function BackgroundRenderer({
     <div
       className={`relative w-full h-full  ${
         background
-          ? "bg-center bg-contain bg-no-repeat"
+          ? "bg-center bg-cover bg-no-repeat"
           : styles["topography-background"]
       }`}
-      style={{ backgroundImage: background ? `url("${background}")` : "" }}
+      style={{
+        minHeight: "600px",
+        backgroundImage: background ? `url("${background}")` : "",
+      }}
     >
       <div
         className={`w-full py-2 py-4 text-3xl font-bold text-center bg-gray-100`}

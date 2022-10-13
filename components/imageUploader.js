@@ -38,13 +38,13 @@ export default function ImageUploader({ file, onUpload = () => {} }) {
         className="hidden"
         type={"file"}
         name="file-upload"
-        accept=".png,.jpg.jpeg"
+        accept=".png,.jpg,.jpeg"
         ref={fileUploader}
         onChange={onFileUpload}
       />
       <button
         onClick={clickUploadInput}
-        className="flex items-center justify-center h-64 border-2 border-gray-500 border-dashed hover:border-blue-600 aspect-square"
+        className="flex items-center justify-center w-64 h-64 border-2 border-gray-500 border-dashed hover:border-blue-600"
       >
         {previewURL && (
           <div
