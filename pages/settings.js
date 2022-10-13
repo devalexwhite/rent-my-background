@@ -186,7 +186,7 @@ export default function UserSettingsPage() {
                                 className="block w-16 mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                               />
                               <span className="ml-2 text-sm font-medium text-gray-700">
-                                minutes
+                                seconds
                               </span>
                             </div>
                           </div>

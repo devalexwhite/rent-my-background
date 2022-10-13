@@ -2,7 +2,7 @@ import Link from "next/link";
 import LogoImage from "./logoImage";
 
 export default function NavBar({ user }) {
-  const navigation = [{ name: "Home", href: "/" }];
+  const navigation = [];
 
   if (user) {
     navigation.push({ name: "Dashboard", href: "/dashboard" });
