@@ -32,7 +32,11 @@ export default function Footer() {
         </div>
         <div className="mt-8 md:order-1 md:mt-0">
           <p className="text-base text-center text-gray-400">
-            Created by Alex White with ☕️ in Ohio
+            Created by{" "}
+            <a href="https://meetthe.dev" className="text-blue-500 underline">
+              Alex White
+            </a>{" "}
+            with ☕️ in Ohio
           </p>
         </div>
       </div>
