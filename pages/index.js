@@ -6,6 +6,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import LogoImage from "../components/logoImage";
 import Link from "next/link";
 import Head from "next/head";
+import Footer from "../components/footer";
 
 const navigation = [
   { name: "Dashboard", href: "/dashboard" },
@@ -308,7 +309,7 @@ export default function IndexPage() {
           </div>
         </div>
 
-        <div className="bg-white">
+        <div className="bg-white ">
           <div className="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="overflow-hidden bg-indigo-700 rounded-lg shadow-xl lg:grid lg:grid-cols-2 lg:gap-4">
               <div className="px-6 pt-10 pb-12 sm:px-16 sm:pt-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20">
@@ -338,6 +339,8 @@ export default function IndexPage() {
           </div>
         </div>
       </div>
+
+      <Footer />
     </>
   );
 }

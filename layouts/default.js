@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 import NavBar from "../components/navbar";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+import Footer from "../components/footer";
 
 export default function DefaultLayout({ children }) {
   const [user, setUser] = useState();
@@ -29,6 +30,7 @@ export default function DefaultLayout({ children }) {
           {children}
         </main>
       </div>
+      <Footer />
     </>
   );
 }

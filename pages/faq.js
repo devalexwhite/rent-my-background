@@ -9,6 +9,7 @@ import {
 import Head from "next/head";
 import LogoImage from "../components/logoImage";
 import Link from "next/link";
+import Footer from "../components/footer";
 
 const navigation = [
   { name: "Dashboard", href: "/dashboard" },
@@ -142,7 +143,7 @@ export default function FaqPage() {
         </Popover>
       </div>
 
-      <div className="bg-gray-50">
+      <div className="min-h-screen bg-gray-50">
         <div className="px-4 py-12 mx-auto max-w-7xl sm:py-16 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto divide-y-2 divide-gray-200">
             <h2 className="text-3xl font-bold tracking-tight text-center text-gray-900 sm:text-4xl">
@@ -180,6 +181,8 @@ export default function FaqPage() {
           </div>
         </div>
       </div>
+
+      <Footer />
     </>
   );
 }
