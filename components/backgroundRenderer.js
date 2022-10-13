@@ -37,7 +37,7 @@ export default function BackgroundRenderer({
       }}
     >
       <div
-        className={`w-full py-2 py-4 text-3xl font-bold text-center bg-gray-100`}
+        className={`w-full pb-2 pt-8 py-4 text-3xl font-bold text-center bg-gray-100`}
       >
         {uploader
           ? `Current background set by ${uploader}`
@@ -45,7 +45,7 @@ export default function BackgroundRenderer({
               profile.firstName ? `${profile.firstName}'s` : "my"
             } background!`}
       </div>
-      <div className="absolute z-20 flex flex-col items-center justify-center p-2 rounded-lg shadow-sm bg-gray-100/50 bottom-5 left-5">
+      <div className="absolute z-20 flex flex-col items-center justify-center p-2 rounded-lg shadow-sm bg-gray-100/50 bottom-10 left-10">
         <div className="mb-2 text-2xl font-bold text-center">
           Set my background!
         </div>
