@@ -1,4 +1,4 @@
-export default function Logo(props) {
+export default function LogoImage(props) {
   return (
     <svg width="124px" height="124px" {...props} viewBox="0 0 124 124">
       <defs>

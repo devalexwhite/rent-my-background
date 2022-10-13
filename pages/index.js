@@ -3,7 +3,7 @@ import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
-import Logo from "../components/Logo";
+import LogoImage from "../components/logoImage";
 import Link from "next/link";
 
 const navigation = [{ name: "Dashboard", href: "/dashboard" }];
@@ -115,7 +115,7 @@ export default function IndexPage() {
                   <div className="flex items-center justify-between w-full md:w-auto">
                     <a href="#">
                       <span className="sr-only">Rent my Background</span>
-                      <Logo className="w-auto h-8 sm:h-10" />
+                      <LogoImage className="w-auto h-8 sm:h-10" />
                     </a>
                     <div className="flex items-center -mr-2 md:hidden">
                       <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 rounded-md bg-gray-50 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">

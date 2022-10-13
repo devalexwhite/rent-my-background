@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import Logo from "../components/logo";
+import LogoImage from "../components/logoImage";
 import AuthGate from "../components/authGate";
 import { createUser, sendLoginLink } from "../lib/user";
 import { useRouter } from "next/router";
@@ -27,7 +27,7 @@ export default function SignupPage() {
       <div className="flex flex-col justify-center flex-1 px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
         <div className="w-full max-w-sm mx-auto lg:w-96">
           <div>
-            <Logo className="w-auto h-16" />
+            <LogoImage className="w-auto h-16" />
             <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900">
               Start renting out your virtual background!
             </h2>

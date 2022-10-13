@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { RocketLaunchIcon } from "@heroicons/react/20/solid";
 
 import ImageUploader from "../components/imageUploader";
-import Logo from "../components/logo";
+import LogoImage from "../components/logoImage";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { getUserInfoFromSlug } from "../lib/user";
@@ -55,7 +55,7 @@ export default function SubmitPage() {
         <div className="flex flex-col items-center max-w-2xl px-6 py-16 mx-auto">
           <Link href={"/"}>
             <a>
-              <Logo className="w-16 h-auto mb-8" />
+              <LogoImage className="w-16 h-auto mb-8" />
             </a>
           </Link>
           <div className="p-4 bg-white rounded-lg shadow-sm">

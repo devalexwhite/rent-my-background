@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Logo from "./logo";
+import LogoImage from "./logoImage";
 
 export default function NavBar({ user }) {
   const navigation = [{ name: "Home", href: "/" }];
@@ -21,7 +21,7 @@ export default function NavBar({ user }) {
               <Link href={"/"}>
                 <a>
                   <span className="sr-only">Rent My Background</span>
-                  <Logo className="w-auto h-10" />
+                  <LogoImage className="w-auto h-10" />
                 </a>
               </Link>
               <div className="hidden ml-10 space-x-8 lg:block">
